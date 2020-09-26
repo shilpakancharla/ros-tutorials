@@ -19,3 +19,11 @@ sudo apt install ros-melodic-desktop-full
 ```
 
 Add the following the bashrc: ```source /opt/ros/melodic/setup.bash```
+
+## C++ Basics
+
+* Structs only contain variables
+
+* Classes contain variables and functions
+
+* Place functions of the class out of class to keep class short
