@@ -26,4 +26,4 @@ Add the following the bashrc: ```source /opt/ros/melodic/setup.bash```
 
 * Classes contain variables and functions
 
-* Place functions of the class out of class to keep class short
+* Place definitions of functions of the class out of class to keep class short
