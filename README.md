@@ -18,3 +18,4 @@ sudo apt update
 sudo apt install ros-melodic-desktop-full
 ```
 
+Add the following the bashrc: ```source /opt/ros/melodic/setup.bash```
