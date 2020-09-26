@@ -1,5 +1,7 @@
 # Tutorials with Robot Operating System (ROS)
 
+Personal notes for understanding ROS setup.
+
 ## Ubuntu Install for ROS Melodic
 
 For OSX, use a virtual machine VirtualBox version 5.2.44 (or any version that is being maintained currently). Set up the virtual machine using the instructions at https://brb.nci.nih.gov/seqtools/installUbuntu.html. 
