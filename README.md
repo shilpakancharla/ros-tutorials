@@ -1,6 +1,6 @@
 # Tutorials with Robot Operating System (ROS)
 
-Personal notes for understanding ROS setup.
+Personal notes for understanding ROS setup. Exercises from 'Robot Operating System (ROS) for Absolute Beginners' by Lentin Joseph.
 
 ## Ubuntu Install for ROS Melodic
 
