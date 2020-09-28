@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shilpa/Documents/ros-tutorials/ROS-CH2/MakefileExample/add.cpp
+add.h
+/home/shilpa/Documents/ros-tutorials/ROS-CH2/MakefileExample/add.h
+
+/home/shilpa/Documents/ros-tutorials/ROS-CH2/MakefileExample/add.h
+iostream
+-
+
+/home/shilpa/Documents/ros-tutorials/ROS-CH2/MakefileExample/main.cpp
+add.h
+/home/shilpa/Documents/ros-tutorials/ROS-CH2/MakefileExample/add.h
+
