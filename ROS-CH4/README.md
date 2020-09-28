@@ -55,3 +55,63 @@
 * __Ecosystem/community support__
 
 * __Extensive tools and simulators__: ROS has many CLI and GUI tools to debug, visualize, and simulate robotic applications.
+
+## ROS Architecture
+
+* Communication between two nodes, in which the node that sends the information is the __publisher node__ and the node that receives the data is the __subscriber node__.
+
+* Node that communicates to aprogram called the __ROS master__.
+
+* The ROS master has all the information from the subscriber and publisher nodes, and then ROS master sends the information to the nodes so that they can communicate with each other. Can send primitive data types and other data types. Different data types being sent are known as __ROS messages__.
+
+* With ROS messages, we can send data with a single data type or multiple data with different data types. These messages are sent through a message bus or path called __ROS topics__.
+
+* When a ROS node publishes a topic, it sends a ROS topic with a ROS message, and it has data with the message type.
+
+## ROS File System
+
+* The ROS file system includes packages, meta packages, package manifests, repositories, message types, and service types.
+
+* __ROS packages__ are the individual units, or the __atomic units__ of ROS software. All source code, data files, build files, dependencies, and other files are organized in packages. 
+
+* A __ROS meta package__ groups a set of similar packages for a specific application. It does not have any source files or data files. It has dependencies of similar packages. Consists of a set of meta packages.
+
+* A __package manifest__ is an XML file placed inside a ROS package. It has all the primary information of a ROS package, including the name of the package, description, author, dependencies, and so forth. 
+
+* A __ROS repository__ is a collection of ROS packages that share a common version control system.
+
+* A __message type description__ is the definition of a new ROS message type. There are existing data types available in ROS that can be directly used for our application, but if we want to create a new ROS message, we can. 
+
+* A __service type definition__ contains our own service definitions.
+
+## ROS Computation Concepts
+
+* __ROS nodes__: Process that uses ROS APIs to perform computations.
+
+* __ROS master__: Intermediate program that connects ROS nodes.
+
+* __ROS parameter server__: Program that normally runs along with the ROS master. The user can store various parameters or values on this erver and all the nodes can access it. The user can set privacy of the paramter too. If it is a public parameter, all the nodes have access; if it private, only a specific node can access the paramter.
+
+* __ROS topics__: Named buses in which ROS nodes can send a message. A node can publish or subscribe any number of topics.
+
+* __ROS messages__: The messages are basically going through the topic. There are existing messages based on primitive data types, and the users can write their own messages.
+
+* __ROS services__: A service call is a function, which can call whenever a client nodes sends a request. The nodes who creates a service call is called a __Server node__ and the node who calls the service is the __client node__.
+
+* __ROS bags__: A useful mehod to save and play back ROS topics. Also useful for logging the data from a robot to process it later.
+
+## ROS Command Tools
+
+* `roscore`: Starts the ROS master, parameter server, and logging node. We can run any other ROS programs/node after running this command. 
+
+* `rosnode`: Explores all aspects of a ROS node, i.e., list the number of ROS nodes running on our system.
+
+* `rostopic`: Provides information about topics publishing/subscribing in the system. Useful for listing topics, printing topic data, and publishing data (`rostopic list`, `rostopic echo /chatter`, `rostopic pub topic_name msg_type data`, `rostopic pub /hello std_msgs/String "Hello"`).
+
+* `rosversion`: Checks your ROS version.
+
+* `rosparam`: Gives a list of parameters loading the parameter server (`rosparam list`, `rosparm set parameter_name value`, `rosparam get parameter_name`).
+
+* `roslaunch`: Can run multiple nodes with ease (more than 10).
+
+
