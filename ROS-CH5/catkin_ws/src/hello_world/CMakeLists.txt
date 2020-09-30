@@ -16,6 +16,19 @@ find_package(catkin REQUIRED COMPONENTS
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
+include_directories(
+	${catkin_INCLUDE_DIRS}
+)
+
+add_executable(talker src/talker.cpp)
+ target_link_libraries(talker
+  ${catkin_LIBRARIES}
+ )
+
+add_executable(listener src/listener.cpp)
+ target_link_libraries(listener
+  ${catkin_LIBRARIES}
+ )
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
