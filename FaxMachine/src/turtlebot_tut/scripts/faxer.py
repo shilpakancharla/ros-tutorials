@@ -15,5 +15,5 @@ def faxer():
 if name == "__main__":
     try:
         faxer()
-    except rospy.ROSInterruptException
+    except rospy.ROSInterruptException:
         pass
