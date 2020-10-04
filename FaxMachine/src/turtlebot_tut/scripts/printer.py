@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from std_msgs import String
+from std_msgs.msg import String
 
 def fax_handler(data):
     rospy.loginfo(data.data)
