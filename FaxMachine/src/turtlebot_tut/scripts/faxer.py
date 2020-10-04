@@ -8,7 +8,7 @@ def faxer():
     rate = rospy.Rate(10) # 10 Hertz
     
     while not rospy.is_shutdown():
-        message = "hello world"
+        message = raw_input("Enter your message: ")
         pub.publish(message)
         rate.sleep()
     
