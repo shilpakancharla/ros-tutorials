@@ -1,0 +1,8 @@
+prefix=/home/shilpa/Documents/ros-tutorials/FaxMachine/install
+
+Name: turtlebot_tut
+Description: Description of turtlebot_tut
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
