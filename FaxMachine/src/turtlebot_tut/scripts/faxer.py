@@ -12,7 +12,7 @@ def faxer():
         pub.publish(message)
         rate.sleep()
     
-if name == "__main__":
+if __name__ == "__main__":
     try:
         faxer()
     except rospy.ROSInterruptException:
