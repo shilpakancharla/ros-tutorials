@@ -43,3 +43,44 @@
 * A __message__ is a single piece of information sent across a topic (i.e., one number, one string, etc.)
 
 * A __package__ is a collection of related nodes that are compiled together and have shared dependencies.
+
+# Gazebo
+
+* __World__: collection of robots and objects (such as buildings, tables, and lights), and global parameters including the sky, ambient light, and physics properties.
+
+* __Static__: entities marked as static (those having the `<static>true</static>` element in SDF), are ojbects which only have collision geometry. All objects which are not meant to move should be maked as static, which is a performance enhancement.
+
+* __Dynamic__: entities marked as dynamic (either missing the `<static>` element or setting false in SDF), are objects which have both intertia and a collision geometry. 
+
+## Position Models
+
+The pose of each model may be altered through the translate and rotate tools: 
+
+### Translation
+
+The translate tool allows you to move the object along the x, y, and z axes. Select this tool now (or press `t`) and click on the object you want to move. A three axes visual marker will appear over the object, which allows you to move the object in x, y, and z directions. 
+
+* You can also just click on the object itself and drag it to move on the x-y plane. You may control which axis the object moves along by pressing and holding the `x`, `y`, or `z` key while dragging the object. 
+
+* You can hold the `Ctrl` key to snap the movement to a 1 meter grid. 
+
+* If the object is not aligned with the world (for example after you use the rotate tool explained next), you can hold the `Shift` key so the visual markers show up aligned with the world, and you can translate in world coordinates.
+
+### Rotation
+
+The rotate tool allows you to orient a model around the x, y, and z axes. Select this tool now (or press `r`) and click on the object you want to move. Three ring-shaped visual marker over the object, which allows you to rotate the object around the x, y, and z axes. 
+
+* You can also just click on the object itself and hold the `x`, `y`, or `z` keys while dragging it to the constraint the motion to one of these axes. 
+
+* You can hold the `Ctrl` key to snap the movmeent to 45 degree increments. 
+
+* If the object is not aligned with the world, you can hold the `Shift` key so the visual markers show up aligned witht he world, and you can rotate about the world axes. 
+
+### Scale
+
+The scale tool allows you to resize a model in the x, y, and z directions. Currently the scale tool only works with simple shapes, i.e., box, cylinder and sphere. Select this tool now (or press `s`) and click on a simple shape. A three axes visual marker will appear over the object, which allows you to scale the x, y, and z dimensions of the object. 
+
+* You can also just click on the object itself and hold the `x`, `y`, or `z` keys while dragging it to constrant the scaling to one of these axes. 
+
+* You can hold the `Ctrl` key to scale in 1 meter increments. 
+
