@@ -84,3 +84,10 @@ The scale tool allows you to resize a model in the x, y, and z directions. Curre
 
 * You can hold the `Ctrl` key to scale in 1 meter increments. 
 
+# SDFormat
+
+SDFormat (Simulation Description Format), sometimes abbreviated as SDF, is an XML format that describes objects and environments for robot simulators, visualization, and control. Originally develped as part of the Gazebo robot simulator, SDFormat was designed with scientific robot applications in mind. Over the years, SDFormat has become a stable, robust, and extensible format capable of describing all apsects of robots, static and dynamic objects, lighting, terrain, and even physics. 
+
+You can accurately describe all aspects of a robot using SDFormat, whether the robot is a simple chassis with wheels or a humanoid. In addition to kinematic and dynamic attributes, sensors, surface properties, textures, joint friction, and many more properties can defined for a robot. These features allow you to use SDFormat for both simulation, visualization, motion planning, and robot control. 
+
+Simulation requires rich and complex environments in which models exist and interact. SDFormat provides the means to define a wide variety of environments. Multiple lights may be included in an environment, terrain (either fictional or based on a DEM), streets from OpenStreetMaps, and any model provided from The Prop Shop (on online repository of 3D models).
