@@ -1,5 +1,8 @@
 # What is ROS?
 
+## BIG PICTURE:
+Nodes (pieces of software) connect together via a publish-subscribe protocol. If node has information to share, it will share this information using a topic. If another node is interested in that information, it will subscribe to that topic, and reads that information.
+
 * A toolkit to help you build robots
 
 * Primarily a message passing service that helps standardize communications across different pieces of a robot
