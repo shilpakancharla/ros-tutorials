@@ -66,3 +66,9 @@
 * `join()`: wait until another thread complets its execution
 * When a thread completes its execution or is abnormally aborted, it enters the terminated state.
 * States: new, runnable, blocked, and terminated 
+
+### Detached Thread
+
+* Garbage collector: automatic memory management; reclaims memory no longer in use by program
+* Threads that are performing background services (like garbage collection) should run as a detached thread, or else we have to wait forever
+* Daemon (background) thread: does not prevent the process from terminating; by default, therads are created as non-daemon
