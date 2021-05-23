@@ -9,3 +9,13 @@
 * When done right, parallel execution increases throughput: accomplish a single task fast; accomplish more tasks in a given time.
 
 ### Parallel Computing Hardware
+
+* Flynn's Taxonomy - 4 types, dependent on number of instruction streams and number of data streams.
+1. Single Instruction Single Data (SISD): sequential computer with a single processor unit (only act on one data at a time)
+2. Single Instruction Multiple Data (SIMD): parallel computer with multiple processing units; execute same instructions on different data
+3. Multiple Instruction Single Data (MISD): each processing unit executes its own instructions, but operate on same set of data (not as practical)
+4. Multiple Instruction Multiple Data (MIMD): every processing unit executes different set of instructions on different sets of data (most commonly used)
+
+* MIMD can be further divided into two categories:
+1. Single Program, Multiple Data (SPMD): multiple processing execute same program (not necessarily same instruction within program) on different data simultaneously
+2. Multiple Program, Multiple Data (MPMD): 
