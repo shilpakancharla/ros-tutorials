@@ -43,3 +43,17 @@
 * Parallelism: simultaneous execution; doing multiple things at once
 * I/O Devices: need to execute concurrently; managed by OS as independent processors (useful in concurrent programming tasks)
 * Parallel processing useful for computational tasks, like matrix multiplication
+
+## Execution Scheduling
+* Scheduler: operating system function that assigns processes and threads to run on available CPUs
+* Ready queue: when a process is ready to run, it gets placed in this queue
+* Context switch: OS needs to save the state, or context, to be resumed later; loading the saved state for the new process or thread to run
+* Scheduling algorithms: some are pre-emptive (may pause), non-preemptive (may run the entire time)
+1. First come, first serve
+2. Shortest job next
+3. Priority
+4. Shortest remaining time
+5. Round-robin
+6. Multiple-level queues
+
+* Scheduling goals: maximize throughput, maximize fairness, minimize wait time, minimize latency
