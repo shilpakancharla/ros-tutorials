@@ -17,5 +17,12 @@
 4. Multiple Instruction Multiple Data (MIMD): every processing unit executes different set of instructions on different sets of data (most commonly used)
 
 * MIMD can be further divided into two categories:
-1. Single Program, Multiple Data (SPMD): multiple processing execute same program (not necessarily same instruction within program) on different data simultaneously
-2. Multiple Program, Multiple Data (MPMD): 
+1. Single Program, Multiple Data (SPMD): multiple processing execute same program (not necessarily same instruction within program) on different data simultaneously; usually includes conditional logic to only execute certain parts
+2. Multiple Program, Multiple Data (MPMD): processors executing different, independent programs at the same time and operating on different data; only processor selected as host and others as nodes
+
+### Shared versus Distributed Memory
+
+* Computer memory operates faster than processor memory
+* Shared memory
+- all processors access the same meory with global address space
+* Distributed memory:
