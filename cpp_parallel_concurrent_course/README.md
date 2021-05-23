@@ -79,3 +79,12 @@
 
 * Data race: problem that occurs when two or more concurrent threads access the same memory location and at least one thread is modifying it
 * Using synchronization techniques to prevent against this
+* Pay attentionwhenever two or more threads access the same resource to prevent data races
+
+### Mutual Exclusion
+
+* Critical section: code segment that accesses a shared resource; should not be executed by more than one thread or process at a time
+* Mutex (lock): mechanism to implement mutual exclusion; only one thread or process can posesses at a time; limits access to critical section
+* Atomic operations: execute as a single action, relative to other threads; cannot be interrupted by other concurrent threads
+* Acquiring a lock: if a lock is already taken, block/wait for it to be available
+* Keep protected sections of code as short as possible
