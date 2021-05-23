@@ -37,14 +37,14 @@
 * Threads are "lightweight" - require less overhead to create and terminate
 * Operating system can switch between threads faster than processes
 
-## Concurrent versus Parallel Execution
+### Concurrent versus Parallel Execution
 * Concurrency: ability of a program to be broken into parts that can run independently of each other; dealing with multiple things at once; program structure
 * Parallel hardware: multi-core processors, graphics processing units (GPUs), computer cluster
 * Parallelism: simultaneous execution; doing multiple things at once
 * I/O Devices: need to execute concurrently; managed by OS as independent processors (useful in concurrent programming tasks)
 * Parallel processing useful for computational tasks, like matrix multiplication
 
-## Execution Scheduling
+### Execution Scheduling
 * Scheduler: operating system function that assigns processes and threads to run on available CPUs
 * Ready queue: when a process is ready to run, it gets placed in this queue
 * Context switch: OS needs to save the state, or context, to be resumed later; loading the saved state for the new process or thread to run
@@ -57,3 +57,12 @@
 6. Multiple-level queues
 
 * Scheduling goals: maximize throughput, maximize fairness, minimize wait time, minimize latency
+
+### Thread Life Cycle
+
+* Threads can spawn child threads, and so on. As they complete, they notify the parent thread and terminate. The parent thread is the last one to terminate.
+* Once a thread has started, it's in the runnable state.
+* When a thread needs to wait in order to run, it's in the blocked state. It will not use any CPU resources. It frees up processor for other threads to use.
+* `join()`: wait until another thread complets its execution
+* When a thread completes its execution or is abnormally aborted, it enters the terminated state.
+* States: new, runnable, blocked, and terminated 
