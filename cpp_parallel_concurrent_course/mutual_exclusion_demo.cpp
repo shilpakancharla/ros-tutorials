@@ -9,13 +9,14 @@ unsigned int garlic_count = 0;
 std::mutex pencil;
 
 void shopper() {
-  pencil.lock();
+
   for (int i = 0; i < 5; i++) {
     printf("Shopper %d is thinking...\n", std::this_thread::get_id());
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    pencil.lock();
     garlic_count++;
+    pencil.unlock();
   }
-  pencil.unlock();
 }
 
 int main() {
