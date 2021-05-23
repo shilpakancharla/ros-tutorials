@@ -72,3 +72,10 @@
 * Garbage collector: automatic memory management; reclaims memory no longer in use by program
 * Threads that are performing background services (like garbage collection) should run as a detached thread, or else we have to wait forever
 * Daemon (background) thread: does not prevent the process from terminating; by default, therads are created as non-daemon
+
+## Mutual Exclusion
+
+### Data Race
+
+* Data race: problem that occurs when two or more concurrent threads access the same memory location and at least one thread is modifying it
+* Using synchronization techniques to prevent against this
