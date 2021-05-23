@@ -23,6 +23,16 @@
 ### Shared versus Distributed Memory
 
 * Computer memory operates faster than processor memory
-* Shared memory
-- all processors access the same meory with global address space
-* Distributed memory:
+* Shared memory: all processors access the same memory with global address space; types are uniform memory access (UMA) and non-uniform memory access (NUMA).
+* Uniform memory access (UMA): all of the processors have equal access to memory; most common is Symmetric Multiprocessing (SMP), processors (which have cache memory) connected to main memory via system bus
+* Non-uniform memory access (NUMA): some processors have quicker access to some memory than others; but overall, all processors can see everything in memory
+* Distributed memory: each processor has its own address in memory space; each processor operates independently and if it makes change to local memory, that is not automatically reflected in other processor memory
+
+## Threads and Processes
+
+* Process: includes code, data, and state information; indpendent instance of a running program; separate memory address
+* Thread: independent path of execution; subset of a process; operating system schedules threads for execution
+* Threads that belong to same process belong to the same address space, giving access to code and data
+* Inter-process Communication (IPC): sockets and pipes, shared memory, and remote procedure calls
+* Threads are "lightweight" - require less overhead to create and terminate
+* Operating system can switch between threads faster than processes
