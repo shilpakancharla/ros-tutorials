@@ -4,17 +4,18 @@
 # include <thread>
 # include <mutex>
 # include <chrono>
+# include <shared_mutex>
 
 char WEEKDAYS[7][10] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 int today = 0;
-std::mutex marker;
+std::shared_mutex marker;
 
 void calendar_reader() {
   for (int i = 0; i < 7; i++) {
-    marker.lock();
+    marker.lock_shared();
     printf("Reader-%d sees today is %s\n", id, WEEKDAYS[today]);
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    marker.unlock();
+    marker.unlock_shared();
   }
 }
 
