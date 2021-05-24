@@ -132,3 +132,22 @@
 ### Livelock
 
 * Multiple threads or processes are actively responding to each other to resolve conflict, but that prevents them from making progress
+
+## Coarse-Grained Parallelism
+
+* Small number of large tasks
+* Advantage - high computation-to-communication ratio
+* Disadvantage - inefficient load balancing
+
+## Synchronization
+
+### Condition Variable
+
+* Condition variable: queue of threads waiting for a certain condition; associated with a mutex
+* Monitor: protect section of code with mutual exclusion; provide ability for threads to wait until a condition occurs
+* Three Operations:
+1. `wait`: automatically release lock on the mtuex; go to sleep and enter waiting queue; reacquire lock when woken up
+2. `signal`: wake up one thread from condition variable queue; also called notify or wake
+3. `broadcast`: wake up all threads from condition variable queue; also called notify all or wake all
+
+* Shared Queue or Buffer: mutex, condition variables (`BufferNotFull`, `BufferNotEmpty`)
