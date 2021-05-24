@@ -88,3 +88,16 @@
 * Atomic operations: execute as a single action, relative to other threads; cannot be interrupted by other concurrent threads
 * Acquiring a lock: if a lock is already taken, block/wait for it to be available
 * Keep protected sections of code as short as possible
+
+## Locks
+
+### Recursive Mutex
+
+* If I attempt to lock the mutex while another thread has it, my thread will be blocked and I need to wait until it unlocks it so it will become available.
+* If I attempt to lock the mutex, it doesn't appear to be available so my thread will just have to wait too. 
+* If a thread tries to lock a mutex that it's already locked, it'll enter into a waiting list for that mutex, which results in something called a deadlock because no other thread can unlock that mutex. There may be times when a program needs to lock a mutex multiple times before unlocking it.
+* Reetrant mutex: mutex that can be locked multiple times by the same process or thread. Keeps track of how many times it's been locked by othe owning thread and it has to be unlocked an equal number of time before another thread can lock it.
+* If you don't unlock the reentrant mutex the same number of times. you can still end up stuck.
+* If you later create another function that uses the same mutext to protect some other section of code, and that section of code uses the increment counter function, since those functions are nested, it ends up locking the mutex twice before unlocking it.
+* Common terms: reentrant mutex, reentrant lock, recursive mutex, recursive lock
+ 
