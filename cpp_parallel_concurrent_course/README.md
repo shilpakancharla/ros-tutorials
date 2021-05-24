@@ -120,3 +120,15 @@
 
 * Deadlock: each member is waiting for another member to take action
 * Liveness: properties that require a system to make progress; members may have to "take turns" in critical sections
+
+### Abandoned Lock
+
+* Errors occurring when a thread traps some resource (a critical section, mutex) and is withdrawn from execution for some reason.
+
+### Starvation
+
+* A process or thread is perpeutally denied the resources it needs.
+
+### Livelock
+
+* Multiple threads or processes are actively responding to each other to resolve conflict, but that prevents them from making progress
