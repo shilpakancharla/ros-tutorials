@@ -171,3 +171,16 @@ while !(SOME_CONDIITON) {
 * Unbounded queue: queue with unlimited capacity (still limited by memory)
 * Average rate of production < Average rate of consumption
 * Pipeline: chain of processing elements
+
+### Semaphore
+
+* Synchronization mechanism
+* Can be used by multiple threads at the same time
+* Includes a counter to track avaialability
+* `acquire()`: if counter is positive, decrement counter; if counter is zero, wait until avaialble
+* `release()`: increment counter, signal waiting thread
+* Counting sempahore: value greater than or equal to 0; used to track limited resources (pool of connections, items in a queue)
+* 0 is a locked state
+* 1 represents unlocked state
+* Semaphore used similar to mutex by acquiring/releasing
+* Mutex vs Semaphore: mutex can only be acquired/released by the same thread; semaphore acquired/release by different threads
