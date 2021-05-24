@@ -184,3 +184,7 @@ while !(SOME_CONDIITON) {
 * 1 represents unlocked state
 * Semaphore used similar to mutex by acquiring/releasing
 * Mutex vs Semaphore: mutex can only be acquired/released by the same thread; semaphore acquired/release by different threads
+
+## Barriers
+
+### Race Conditions
