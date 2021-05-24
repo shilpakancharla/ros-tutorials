@@ -106,3 +106,10 @@
 * Non-blocking lock/acquire method for mutex
 * If the mutex is available, lock it and return TRUE
 * If the mutex is not available, immediately return FALSE
+
+### Shared Mutex
+
+* Reader-Writer Lock
+* Shared read: multiple threads at once, or
+* Exclusive write: only one thread at a time
+* Keep track of number of threads being read versus number of threads being writing
