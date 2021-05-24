@@ -149,5 +149,25 @@
 1. `wait`: automatically release lock on the mtuex; go to sleep and enter waiting queue; reacquire lock when woken up
 2. `signal`: wake up one thread from condition variable queue; also called notify or wake
 3. `broadcast`: wake up all threads from condition variable queue; also called notify all or wake all
-
 * Shared Queue or Buffer: mutex, condition variables (`BufferNotFull`, `BufferNotEmpty`)
+* Using a condition variable:
+
+````
+std::unique_lock<std::mutex> lk(cv_m);
+
+while !(SOME_CONDIITON) {
+ cv.wait(lk); // Wait here until signaled
+}
+
+// Execute critical section
+````
+
+### Producer-Consumer
+
+* Producer(s): add elements to shared data structure
+* Consumer(s): remove elements from shared data structure
+* First-in-first-out (FIFO): items are removed in the same order that they're added to the queue; first item added will be first item removed
+* Synchronization challenges: enforce mutual exclusion of producers and consumers; prevent producers from trying to add data to a full queue; prevent consumers from trying to remove data from an empty queue
+* Unbounded queue: queue with unlimited capacity (still limited by memory)
+* Average rate of production < Average rate of consumption
+* Pipeline: chain of processing elements
