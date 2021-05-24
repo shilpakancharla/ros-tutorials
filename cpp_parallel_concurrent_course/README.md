@@ -113,3 +113,10 @@
 * Shared read: multiple threads at once, or
 * Exclusive write: only one thread at a time
 * Keep track of number of threads being read versus number of threads being writing
+
+## Liveness
+
+### Deadlock
+
+* Deadlock: each member is waiting for another member to take action
+* Liveness: properties that require a system to make progress; members may have to "take turns" in critical sections
