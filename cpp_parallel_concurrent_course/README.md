@@ -101,3 +101,8 @@
 * If you later create another function that uses the same mutext to protect some other section of code, and that section of code uses the increment counter function, since those functions are nested, it ends up locking the mutex twice before unlocking it.
 * Common terms: reentrant mutex, reentrant lock, recursive mutex, recursive lock
  
+### Try Lock
+
+* Non-blocking lock/acquire method for mutex
+* If the mutex is available, lock it and return TRUE
+* If the mutex is not available, immediately return FALSE
