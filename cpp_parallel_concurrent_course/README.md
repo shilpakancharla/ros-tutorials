@@ -231,3 +231,25 @@ while !(SOME_CONDIITON) {
 * Combine solutions of subproblems
 * `if "base case"` : solve problem
 * `else` : partition problem into "left" and "right" subproblems; solve "left" problem using divide-and-conquer;  solve "right" problem using divide-and-conquer; combine solutions to "left" and "right" problems
+
+## Evaluating Parallel Performance
+
+### Speedup, latency, and throughput
+
+* Weak scaling: variable number of processors with fixed problem size per processor; accomplish more work in the same time
+* Strong scaling: variable number of processors with fixed total problem size; accomplish same work in less time
+* throughput = (# tasks) / time
+* latency = time / task
+* speedup = (sequential execution time) / (parallel execution time with N workers)
+
+### Amdahl's Law
+
+* Overall speedup = 1 / ((1 - P) + P/S)
+* P = portion of program that's parallelizable
+* S = speedup of the parallelized portion
+
+### Measure Speedup
+
+* speedup = (sequential execution time) / (parallel execution time with N workers)
+* Efficiency: how well the resources are utilized
+* efficiency = speedup / (# of processors)
