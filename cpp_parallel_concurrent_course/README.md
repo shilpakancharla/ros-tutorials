@@ -203,3 +203,31 @@ while !(SOME_CONDIITON) {
 
 * Initialize count to 1 (a simple on/off gate)
 * Initialize count to N (wait for N threads to complete some action; wait for some action to complete N times)
+
+## Asynchronous Tasks
+
+### Computational Graph
+
+* The key to parallel programming is determining which steps within a program can be executed in parallel, and then figuring out how to coordinate them. 
+* Computational graphs can be used to help model how steps in a program relate to each other. 
+* Each step represents a task, which is a unit of execution or a unit of work.
+* A task cannot begin executing until all of the tasks with arrows feeding into have completed.
+* Ideal parallelism = work / span
+
+### Thread Pool
+
+* Creates and maintains a collection of worker threads
+* Reuses existing threads to execute tasks
+
+### Future
+
+* Placeholder for a result that will be available later
+* Mechanism to access the result of an asynchronous operation
+
+### Divide and Conquer
+
+* Divide the problem into subproblems
+* Conquer the subproblems by solving them recursively
+* Combine solutions of subproblems
+* `if "base case"` : solve problem
+* `else` : partition problem into "left" and "right" subproblems; solve "left" problem using divide-and-conquer;  solve "right" problem using divide-and-conquer; combine solutions to "left" and "right" problems
