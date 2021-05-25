@@ -188,3 +188,13 @@ while !(SOME_CONDIITON) {
 ## Barriers
 
 ### Race Conditions
+
+* Searching for Race Conditions: use sleep statements to modify and execution order
+* Heisenbug: a software bug that disappears when you try to study it
+* Data races and race conditions are two different potential problesm in concurrent programs 
+* Data races: can occur when two or more threads concurrently access the same memory location
+* Race condition: flaw in the timing or ordering of a program's execution that causes incorrect behavior
+
+### Barrier
+
+* Barrier: prevents a group of threads from proceeding until enough threads have reached the barrier
