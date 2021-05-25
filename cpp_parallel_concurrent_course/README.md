@@ -253,3 +253,25 @@ while !(SOME_CONDIITON) {
 * speedup = (sequential execution time) / (parallel execution time with N workers)
 * Efficiency: how well the resources are utilized
 * efficiency = speedup / (# of processors)
+
+## Designing Parallel Programs
+
+### Partitioning, Communication, Agglomeration, Mapping
+
+* Parallel Design Stages: 
+1. Partitioning: break the problem down into discrete pieces of work (block decomposition, cyclic decomposition)
+2. Communication: coordinate task execution and share information (point-to-point communciation with sender and receiver, collective commucation with broadcast or scatter)
+* Synchronous blocking communication: tasks wait until entire communication is complete; cannot do other work while in progress
+* Asynchronous non-blocking communication: tasks do not wait for communication to complete; can do other work while in progress
+* Overhead: compute time/resources spent on communication
+* Latency: time to send message from A to b (microseconds)
+* Bandwidth: amount to data communicated per seconds (GB/s)
+3. Agglomeration: combine tasks and replicate data/computation to increase efficiency
+* granularity = computation / communication
+* Fine-grained parallelism: large number of small tasks; advantage: good distribution of workload (load balancing); disadvantage: low computation-to-communication ratio
+* Coarse-grained parallelism: small number of larger tasks; advantage: high computation-to-communication ratio; disadvantage: inefficient load balancing
+4. Mapping: specify where each task will execute
+* Does not apply to single-core processors, automated task scheduling
+* Minimize the total execution time
+* Place tasks that can execute concurrently on different processors
+* Place tasks the communicate frequently on the same processor
