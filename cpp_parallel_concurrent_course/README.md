@@ -198,3 +198,8 @@ while !(SOME_CONDIITON) {
 ### Barrier
 
 * Barrier: prevents a group of threads from proceeding until enough threads have reached the barrier
+
+### Latch
+
+* Initialize count to 1 (a simple on/off gate)
+* Initialize count to N (wait for N threads to complete some action; wait for some action to complete N times)
